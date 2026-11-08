@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Armani Vazquez | Founder and Creative Director</title>
 <meta name="description" content="Armani Vazquez builds businesses, digital experiences, creative projects, and technology-driven brands.">
-<meta name="theme-color" content="#1A0B3B">
+<meta name="theme-color" content="#070A1E">
 <link rel="canonical" href="https://lilmoniisenterprise.github.io/armani-vazquez-portfolio/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Armani Vazquez | Founder and Creative Director">
@@ -14,106 +14,128 @@
 <meta property="og:image" content="https://lilmoniisenterprise.github.io/armani-vazquez-portfolio/images/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="fonts/Syne.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="css/styles.css">
+<script src="js/main.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="top" id="top">
+  <div class="bar">
+    <a class="logo" href="#main" aria-label="AR.MANI home">AR.MANI</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i></button>
+    <nav id="menu" aria-label="Main">
+      <a href="#brands" data-spy>Brands</a>
+      <a href="#work" data-spy>Work</a>
+      <a href="#connect" data-spy>Connect</a>
+      <a class="btn btn-sm" href="https://calendly.com/virellionapex/free-consultation" target="_blank" rel="noopener">Book a free consultation</a>
+    </nav>
+  </div>
+</header>
 
 <main id="main">
-  <section class="poster hero" aria-labelledby="hero-title">
-    <nav class="nav" aria-label="Main">
-      <span class="nav-role">Founder, creative director, entrepreneur</span>
-      <ul>
-        <li><a href="#brands">Brands</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#connect">Connect</a></li>
-      </ul>
-    </nav>
+  <section class="hero" id="hero">
+    <div class="aurora" aria-hidden="true"><b></b><b></b><b></b></div>
+    <div class="spot" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="role">Founder, Creative Director, Entrepreneur</p>
+        <h1>Ideas become brands. Brands become experiences.</h1>
+        <p class="lead">I’m Armani Vazquez, building businesses, digital experiences, creative projects, and technology-driven brands.</p>
+        <div class="tabs" role="tablist" aria-label="Areas of focus" id="focusTabs"></div>
+        <p class="tab-text" id="focusText" role="tabpanel" aria-live="polite"></p>
+        <div class="cta">
+          <a class="btn" href="#work">Explore the work</a>
+          <a class="btn btn-ghost" href="#connect">Start a project</a>
+        </div>
+      </div>
+      <div class="reel" id="reel" aria-roledescription="carousel" aria-label="Website demos">
+        <button class="frame" id="reelFrame" type="button">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i><em id="reelUrl"></em></span>
+          <span class="reel-stage" id="reelStage"></span>
+        </button>
+        <div class="reel-foot">
+          <p id="reelName" aria-live="off"></p>
+          <div class="reel-nav" id="reelNav"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="hero-copy">
-      <h2 class="statement">Ideas become brands. Brands become experiences.</h2>
-      <div class="intro">
-        <p>I’m Armani Vazquez, building businesses, digital experiences, creative projects, and technology-driven brands.</p>
-        <ul class="focus" aria-label="Areas of focus">
-          <li>Entrepreneurship</li>
-          <li>Creative direction</li>
-          <li>Digital strategy</li>
+  <section class="sec" id="brands">
+    <div class="wrap">
+      <h2>The brand ecosystem</h2>
+      <p class="sub">Select a brand to see what it does.</p>
+      <div class="brands" id="brandGrid"></div>
+      <div class="brand-panel" id="brandPanel" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="work">
+    <div class="wrap">
+      <h2>Selected digital experiences</h2>
+      <p class="sub">Website concepts and demonstrations, not represented as client projects.</p>
+      <div class="filters" id="filters" role="group" aria-label="Filter demos"></div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="connect">
+    <div class="wrap connect">
+      <div>
+        <h2 class="big">Let’s build something meaningful.</h2>
+        <p class="sub">Armani Vazquez, Founder &amp; Creative Director</p>
+        <ul class="links">
+          <li><a href="mailto:armani@virellionapex.com">armani@virellionapex.com</a></li>
+          <li><a href="https://virellionapex.com" target="_blank" rel="noopener">Virellion Apex</a></li>
+          <li><a href="https://ai.virellionapex.com" target="_blank" rel="noopener">AI Virellion Apex</a></li>
         </ul>
+        <a class="btn" href="https://calendly.com/virellionapex/free-consultation" target="_blank" rel="noopener">Book a free consultation</a>
       </div>
+      <form class="builder" id="builder" novalidate>
+        <h3>Start a project</h3>
+        <fieldset><legend>What do you need?</legend><div class="opts" id="needs"></div></fieldset>
+        <fieldset><legend>When do you want to start?</legend><div class="opts" id="timing"></div></fieldset>
+        <div class="fields">
+          <label>Your name<input id="fName" type="text" maxlength="80" autocomplete="name"></label>
+          <label>Business name<input id="fBiz" type="text" maxlength="80" autocomplete="organization"></label>
+        </div>
+        <label>Anything else?<textarea id="fNote" rows="2" maxlength="500"></textarea></label>
+        <div class="msg"><span>Your request</span><p id="msgOut"></p></div>
+        <div class="cta">
+          <a class="btn" id="sendMail" href="#">Email this request</a>
+          <button class="btn btn-ghost" id="copyMsg" type="button">Copy text</button>
+        </div>
+        <p class="hint" id="builderHint" role="status"></p>
+      </form>
     </div>
-
-    <h1 class="wordmark" id="hero-title" aria-label="AR.MANI">
-      <span aria-hidden="true"><i>A</i><i>R</i><i>.</i><i>M</i><i>A</i><i>N</i><i>I</i></span>
-    </h1>
-  </section>
-
-  <section id="brands" aria-labelledby="brands-title">
-    <h2 class="section-title brands-title" id="brands-title">The brand ecosystem</h2>
-    <div class="band band-moni">
-      <h3>L’Moni Maison de Mode</h3>
-      <p>Luxury fashion</p>
-    </div>
-    <div class="band band-drops">
-      <h3>Drops By BK3</h3>
-      <p>Gaming &amp; creator retail</p>
-    </div>
-    <div class="band band-madjon">
-      <h3>DJ MADJON</h3>
-      <p>Music &amp; entertainment</p>
-    </div>
-    <a class="band band-virellion" href="https://virellionapex.com" target="_blank" rel="noopener">
-      <h3>Virellion Apex</h3>
-      <p>Consulting &amp; strategy</p>
-    </a>
-  </section>
-
-  <section class="work" id="work" aria-labelledby="work-title">
-    <header class="work-head">
-      <h2 class="section-title" id="work-title">Selected digital experiences</h2>
-      <p>Website concepts and demonstrations, not represented as client projects.</p>
-    </header>
-    <div class="gallery">
-      <a class="tile t-ondessa" href="https://lilmoniisenterprise.github.io/restaurant-demo/" target="_blank" rel="noopener">
-        <img src="images/ondessa.jpg" alt="Overhead illustration of paella, grilled fish and small plates on a wood table" width="1400" height="817" loading="lazy">
-        <h3>ONDESSA Restaurant Demo</h3>
-        <p>Restaurant website concept</p>
-      </a>
-      <a class="tile t-elvare" href="https://lilmoniisenterprise.github.io/elvare-luxury-fashion/" target="_blank" rel="noopener">
-        <img src="images/elvare.jpg" alt="Model in a white blouse and headwrap against rose-toned pleated fabric" width="1400" height="788" loading="lazy">
-        <h3>ÉLVARÉ Fashion Demo</h3>
-        <p>Luxury fashion storefront concept</p>
-      </a>
-      <a class="tile t-contractor" href="https://contractor-demo.pages.dev" target="_blank" rel="noopener">
-        <img src="images/contractor.jpg" alt="Construction crane drawn against a dark slate sky" width="1400" height="788" loading="lazy">
-        <h3>Contractor Demo</h3>
-        <p>Construction business website concept</p>
-      </a>
-      <a class="tile t-consulting" href="https://consulting-demo.pages.dev" target="_blank" rel="noopener">
-        <img src="images/consulting.jpg" alt="Pale office tower rising beside a deep green facade" width="933" height="1400" loading="lazy">
-        <h3>Consulting Demo</h3>
-        <p>Professional services concept</p>
-      </a>
-      <a class="tile t-retail" href="https://lilmoniisenterprise.github.io/retail-demo/" target="_blank" rel="noopener">
-        <img src="images/retail.jpg" alt="Orbit Lane store banner on an electric blue background" width="800" height="451" loading="lazy">
-        <h3>Retail Demo</h3>
-        <p>E-commerce website concept</p>
-      </a>
-    </div>
-  </section>
-
-  <section class="poster connect" id="connect" aria-labelledby="connect-title">
-    <h2 class="connect-title" id="connect-title">Let’s build something meaningful.</h2>
-    <div class="connect-row">
-      <a class="button" href="https://calendly.com/virellionapex/free-consultation" target="_blank" rel="noopener">Book a free consultation</a>
-      <div class="contact">
-        <a href="mailto:armani@virellionapex.com">armani@virellionapex.com</a>
-        <a href="https://virellionapex.com" target="_blank" rel="noopener">Virellion Apex</a>
-        <a href="https://ai.virellionapex.com" target="_blank" rel="noopener">AI Virellion Apex</a>
-      </div>
-    </div>
-    <p class="signoff">Armani Vazquez, Founder &amp; Creative Director</p>
   </section>
 </main>
+
+<footer class="foot"><div class="wrap"><span>© <span id="yr">2026</span> Armani Vazquez</span><a href="#main">Back to top</a></div></footer>
+
+<dialog class="viewer" id="viewer" aria-labelledby="vTitle">
+  <div class="v-head">
+    <div><h3 id="vTitle"></h3><p id="vType"></p></div>
+    <button class="icon" id="vClose" type="button" aria-label="Close">×</button>
+  </div>
+  <div class="v-body">
+    <div class="v-stage">
+      <div class="tabs" id="vTabs" role="tablist" aria-label="Screens"></div>
+      <div class="v-shot" id="vShot"></div>
+    </div>
+    <aside class="v-side">
+      <h4>What you can try</h4>
+      <ul id="vList"></ul>
+      <p class="hint">Fictional business built as a demonstration by Virellion Apex.</p>
+      <div id="vAct"></div>
+      <div class="v-pager">
+        <button class="btn btn-ghost btn-sm" id="vPrev" type="button">Previous</button>
+        <button class="btn btn-ghost btn-sm" id="vNext" type="button">Next</button>
+      </div>
+    </aside>
+  </div>
+</dialog>
 </body>
 </html>
