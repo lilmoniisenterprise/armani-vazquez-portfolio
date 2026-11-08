@@ -20,7 +20,7 @@
   var BRANDS = [
     { id: 'lmoni', name: 'L’Moni Maison de Mode', type: 'Luxury fashion', img: 'lmoni', text: 'Luxury women’s fashion and personal styling, based in San Antonio.', tags: ['Collections', 'Styling', 'Ready to wear'], url: 'https://lmonimaison.com', host: 'lmonimaison.com' },
     { id: 'drops', name: 'Drops By BK3', type: 'Gaming & creator retail', img: 'drops', text: 'A streetwear brand blending gaming culture with tactical-inspired style, released in numbered drops.', tags: ['Streetwear', 'Gaming gear', 'Creator retail'], url: 'https://dropsbybk3.com', host: 'dropsbybk3.com' },
-    { id: 'madjon', name: 'DJ MADJON', type: 'Music & entertainment', img: 'madjon', text: 'Music releases, bookings, licensing, promotions, and distribution.', tags: ['Releases', 'Bookings', 'Licensing'] },
+    { id: 'madjon', name: 'DJ MADJON', type: 'Music & entertainment', img: 'madjon', text: 'The official home for DJ MADJON’s music, merch, updates, and booking enquiries.', tags: ['Music', 'Merch', 'Bookings'], url: 'https://djmadjon.com', host: 'djmadjon.com' },
     { id: 'virellion', name: 'Virellion Apex', type: 'Consulting & strategy', img: 'virellion', text: 'Business consulting and creative strategy, with website and AI services for growing companies.', tags: ['Consulting', 'Websites', 'AI services'], url: 'https://virellionapex.com', host: 'virellionapex.com' }
   ];
 
